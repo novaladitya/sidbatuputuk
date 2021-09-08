@@ -8,13 +8,14 @@ use App\Models\PersentasePekerjaanModel;
 use App\Models\SambutanModel;
 use App\Models\KontakModel;
 use App\Models\ProdukDesaModel;
+use App\Models\AkunModel;
 
 use CodeIgniter\I18n\Time;
 use DateTime;
 
 class AdminPage extends BaseController
 {
-    protected $postModel, $carrouselModel, $persentasePekerjaanModel, $sambutanModel, $kontakModel, $produkDesaModel;
+    protected $postModel, $carrouselModel, $persentasePekerjaanModel, $sambutanModel, $kontakModel, $produkDesaModel, $akunModel;
     public function __construct()
     {
         $this->postModel = new PostModel();
@@ -23,11 +24,50 @@ class AdminPage extends BaseController
         $this->sambutanModel = new SambutanModel();
         $this->kontakModel = new KontakModel();
         $this->produkDesaModel = new ProdukDesaModel();
+        $this->produkDesaModel = new ProdukDesaModel();
+        $this->akunModel = new AkunModel();
 
         helper('form');
         $this->doc = new \DOMDocument();
         // $this->load->library('upload');
     }
+
+    /* ======= Session ======= */
+    public function login()
+    {
+        return view('admin/page/login');
+    }
+
+    public function auth()
+    {
+        $inputUsername = $this->request->getVar('username');
+        $inputPassword = $this->request->getVar('password');
+        $user = $this->akunModel->getUser($inputUsername);
+
+        if ($user) {
+            $password = $user['password'];
+            if ($inputPassword == $password) {
+                $dataSession = [
+                    'logged_in' => TRUE
+                ];
+                session()->set($dataSession);
+                return redirect()->to('/admin');
+            } else {
+                session()->setFlashdata('error', 'Password salah.');
+                return redirect()->to('/login');
+            }
+        } else {
+            session()->setFlashdata('error', 'username tidak ditemukan.');
+            return redirect()->to('/login');
+        }
+    }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/login');
+    }
+    /* ======= /Session ======= */
 
     /* ======= Beranda ======= */
     public function index()
@@ -36,7 +76,11 @@ class AdminPage extends BaseController
             'halaman'    => 'beranda'
         ];
 
-        return view('admin/page/beranda', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/beranda', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
     /* ======= /Beranda ======= */
 
@@ -48,7 +92,11 @@ class AdminPage extends BaseController
             'carrousel'  => $this->carrouselModel->getCarrousel()
         ];
 
-        return view('admin/page/carrousel', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/carrousel', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function insertCarrousel()
@@ -111,7 +159,11 @@ class AdminPage extends BaseController
             'detailCarrousel' => $this->carrouselModel->getCarrouselDetail($id)
         ];
 
-        return view('admin/page/carrousel', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/carrousel', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function updateCarrousel()
@@ -168,7 +220,11 @@ class AdminPage extends BaseController
             'pekerjaan'  => $this->persentasePekerjaanModel->getPekerjaan()
         ];
 
-        return view('admin/page/persentase_pekerjaan', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/persentase_pekerjaan', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function updatePersentasePekerjaan()
@@ -200,7 +256,11 @@ class AdminPage extends BaseController
             'sambutan' => $this->sambutanModel->getSambutan()
         ];
 
-        return view('admin/page/sambutan', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/sambutan', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function insertSambutan()
@@ -279,7 +339,11 @@ class AdminPage extends BaseController
             'detailSambutan' => $this->sambutanModel->getSambutanDetail($id)
         ];
 
-        return view('admin/page/sambutan', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/sambutan', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function updateSambutan()
@@ -352,7 +416,11 @@ class AdminPage extends BaseController
             'kontak'   => $this->kontakModel->getKontak()
         ];
 
-        return view('admin/page/kontak', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/kontak', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function updateKontak()
@@ -451,7 +519,11 @@ class AdminPage extends BaseController
             'post'     => $this->postModel->getPostKategori('Profil Desa')
         ];
 
-        return view('admin/page/profil_desa', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/profil_desa', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function insertProfilDesa()
@@ -514,7 +586,11 @@ class AdminPage extends BaseController
             'detailPost' => $this->postModel->getPostSlug($slug)
         ];
 
-        return view('admin/page/profil_desa', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/profil_desa', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function updateProfilDesa()
@@ -605,7 +681,11 @@ class AdminPage extends BaseController
             'post'     => $this->postModel->getPostKategori('Lembaga Masyarakat')
         ];
 
-        return view('admin/page/lembaga_masyarakat', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/lembaga_masyarakat', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function insertLembagaMasyarakat()
@@ -668,7 +748,11 @@ class AdminPage extends BaseController
             'detailPost' => $this->postModel->getPostSlug($slug)
         ];
 
-        return view('admin/page/lembaga_masyarakat', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/lembaga_masyarakat', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function updateLembagaMasyarakat()
@@ -759,7 +843,11 @@ class AdminPage extends BaseController
             'post'     => $this->postModel->getPostKategori('Berita')
         ];
 
-        return view('admin/page/berita', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/berita', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function insertBerita()
@@ -822,7 +910,11 @@ class AdminPage extends BaseController
             'detailPost' => $this->postModel->getPostSlug($slug)
         ];
 
-        return view('admin/page/berita', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/berita', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function updateBerita()
@@ -913,7 +1005,11 @@ class AdminPage extends BaseController
             'produk'  => $this->produkDesaModel->getAllProduk()
         ];
 
-        return view('admin/page/belanja', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/belanja', $data);
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function insertProduk()
@@ -990,7 +1086,11 @@ class AdminPage extends BaseController
             'detailProduk' => $this->produkDesaModel->getProdukDetail($id)
         ];
 
-        return view('admin/page/belanja', $data);
+        if (session()->get('logged_in')) {
+            return view('admin/page/belanja', $data);
+		} else {
+			return redirect()->to('/login');
+		}
     }
 
     public function updateProduk()
@@ -1043,8 +1143,6 @@ class AdminPage extends BaseController
             }
             $fileGambar->move('assets/img/beranda/belanja', $this->produkDesaModel->getProdukDetail($id)->gambar);
         }
-
-        // dd($this->request->getVar('deskripsi'));
 
         $this->produkDesaModel->insertProduk([
             'id'        => $id,

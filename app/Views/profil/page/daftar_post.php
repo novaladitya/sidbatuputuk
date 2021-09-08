@@ -14,6 +14,9 @@
       break;
     case 'berita':
       $title = "Berita Desa";
+      break;
+    case 'blog':
+      $title = "Blog Desa";
   }
   ?>
   <div class="header-bg page-area">
@@ -107,13 +110,13 @@
                 <h4>Kategori</h4>
                 <ul>
                   <li>
-                    <a href="/profil-desa">Profil Desa</a>
+                    <a class="<?= $halaman == 'profil_desa' ? 'active' : '' ?>" href="/profil-desa">Profil Desa</a>
                   </li>
                   <li>
-                    <a href="/lembaga-masyarakat">Lembaga Masyarakat</a>
+                    <a class="<?= $halaman == 'lembaga_masyarakat' ? 'active' : '' ?>" href="/lembaga-masyarakat">Lembaga Masyarakat</a>
                   </li>
                   <li>
-                    <a href="/berita">Berita Desa</a>
+                    <a class="<?= $halaman == 'berita' ? 'active' : '' ?>" href="/berita">Berita Desa</a>
                   </li>
                 </ul>
               </div>

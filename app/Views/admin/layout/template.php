@@ -5,10 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>AdminLTE 3 | Blank Page</title>
+  <title>Admin Desa Batu Putuk</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+  <!-- Favicons -->
+  <link href="<?= base_url(); ?>/assets/img/logo.png" rel="icon">
+  <link href="<?= base_url(); ?>/assets/img/logo.png" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
   <link rel="stylesheet" href="<?= base_url(); ?>/assets/admin/plugins/fontawesome-free/css/all.min.css">
@@ -37,7 +41,7 @@
 
       <!-- Right Side -->
       <ul class="navbar-nav ml-auto">
-        <!-- Buat Logout -->
+        <a type="button" class="btn btn-danger" href="/adminpage/logout">Logout</a>
       </ul>
     </nav>
     <!-- ======= /Header ======= -->

@@ -10,8 +10,8 @@
     <meta content="Website Desa" name="keywords">
 
     <!-- Favicons -->
-    <link href="<?= base_url(); ?>/assets/img/Logo.svg" rel="icon">
-    <link href="<?= base_url(); ?>/assets/img/Logo.svg" rel="apple-touch-icon">
+    <link href="<?= base_url(); ?>/assets/img/logo.png" rel="icon">
+    <link href="<?= base_url(); ?>/assets/img/logo.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
@@ -35,47 +35,15 @@
         <div class="container d-flex justify-content-between">
 
             <div class="logo">
-                <!-- <h1><a href="#"><span>Desaku</span> Desamu</a></h1> -->
+                <!-- <h1><a href="#"><span>Desa</span> Batu Putuk</a></h1> -->
                 <!-- Uncomment below if you prefer to use an image logo -->
-                <a href="/"><img src="<?= base_url(); ?>/assets/img/logo.svg" width="160px" alt="Desaku Desamu" class="img-fluid"></a>
+                <a href="/"><img src="<?= base_url(); ?>/assets/img/logo.png" width="160px" alt="Desaku Desamu" class="img-fluid"></a>
             </div>
 
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="<?= $halaman == 'beranda' ? 'active' : '' ?>" href="/">Beranda</a></li>
-                    <li><a class="<?= $halaman == 'profil_desa' ? 'active' : '' ?>" href="/profil-desa">Profil Desa</a></li>
-                    <li><a class="<?= $halaman == 'lembaga_masyarakat' ? 'active' : '' ?>" href="/lembaga-masyarakat">Lembaga Masyarakat</a></li>
-                    <!-- <li class="dropdown"><a href=""><span>Profil Desa</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="/post/sejarah-desa-seiket">Sejarah</a></li>
-                            <li><a href="">Geografis</a></li>
-                            <li><a href="">Arti Lambang</a></li>
-                            <li><a href="">Data Penduduk</a></li>
-                            <li class="dropdown"><a href="#"><span>Pemerintahan</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="">Visi Misi</a></li>
-                                    <li><a href="">Struktur</a></li>
-                                    <li><a href="">Program Desa</a></li>
-                                    <li><a href="">Pencapaian Desa</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li> -->
-                    <!-- <li class="dropdown"><a href=""><span>Lembaga Masyarakat</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="">BPD</a></li>
-                            <li><a href="">Lembaga Pemasyarakatan</a></li>
-                            <li><a href="">Lembaga Adat</a></li>
-                            <li><a href="">Lembaga Desa</a></li>
-                            <li><a href="">Bumdes</a></li>
-                            <li><a href="">Karang Taruna</a></li>
-                            <li><a href="">Linmas</a></li>
-                            <li><a href="">PKK</a></li>
-                            <li><a href="">Kelompok Tani</a></li>
-                        </ul>
-                    </li> -->
-                    <li><a class="<?= $halaman == 'berita' ? 'active' : '' ?>" href="/berita">Berita</a></li>
-                    <li><a class="" href="">Pelayanan</a></li>
+                    <li><a class="<?= $halaman == 'blog' ? 'active' : '' ?>" href="/blog">Blog</a></li>
                     <li><a class="<?= $halaman == 'belanja' ? 'active' : '' ?>" href="/belanja">Belanja</a></li>
                     <?php if ($halaman == 'beranda') : ?>
                         <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>

@@ -37,11 +37,13 @@ $routes->add('/', 'ProfilPage::beranda');
 $routes->add('/profil-desa', 'ProfilPage::profilDesa');
 $routes->add('/lembaga-masyarakat', 'ProfilPage::lembagaMasyarakat');
 $routes->add('/berita', 'ProfilPage::berita');
+$routes->add('/blog', 'ProfilPage::blog');
 $routes->add('/post/(:segment)', 'ProfilPage::viewPost/$1');
 $routes->add('/belanja', 'ProfilPage::belanja');
 
 //Admin Page
 $routes->add('/admin', 'AdminPage::index');
+$routes->add('/login', 'AdminPage::login');
 $routes->add('/admin/carrousel', 'AdminPage::carrousel');
 $routes->add('/admin/edit-carrousel/(:num)', 'AdminPage::editCarrousel/$1');
 $routes->add('/admin/persentase-pekerjaan', 'AdminPage::persentasePekerjaan');

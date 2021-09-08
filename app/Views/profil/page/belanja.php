@@ -39,18 +39,10 @@
                 </div>
             </div>
 
-            <?php
-            $data = [
-                "gambar"  => "/assets/img/portfolio/1.jpg",
-                "nama"    => "Alat Tulis",
-                "penjual" => "Ibu Suyatri",
-            ]
-            ?>
-
             <div class="row awesome-project-content portfolio-container">
                 <?php foreach ($produk as $p) : ?>
                     <!-- produk-item start -->
-                    <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-barang">
+                    <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-<?= $p['kategori']; ?>">
                         <div class="single-awesome-project">
                             <div class="awesome-img">
                                 <a><img src="<?= base_url() ?>/assets/img/beranda/belanja/<?= $p['gambar']; ?>" /></a>
@@ -151,7 +143,7 @@
         modalBodyNotelepon.textContent = dataNotelepon
 
         var buttonWhatsapp = produkModal.querySelector('#buttonWhatsapp')
-        buttonWhatsapp.setAttribute('href', 'https://wa.me/62' + dataNotelepon.substring(1) +'?text=Saya%20tertarik%20dengan%20produknya%20' + dataPenjual + '%20yang%20dijual');
+        buttonWhatsapp.setAttribute('href', 'https://wa.me/62' + dataNotelepon.substring(1) + '?text=Saya%20tertarik%20dengan%20produknya%20' + dataPenjual + '%20yang%20dijual');
     })
 </script>
 <?= $this->endSection(); ?>

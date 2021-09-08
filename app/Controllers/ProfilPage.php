@@ -81,6 +81,17 @@ class ProfilPage extends BaseController
 		return view('profil/page/belanja', $data);
 	}
 
+	public function blog()
+	{
+		$data = [
+			'halaman' 	  => 'blog',
+			'daftar_post' => $this->postModel->getAllPost(),
+			'kontak'      => $this->kontakModel->getKontak()
+		];
+
+		return view('profil/page/daftar_post', $data);
+	}
+
 	public function viewPost($slug)
 	{
 		$post = $this->postModel->getPostSlug($slug);
