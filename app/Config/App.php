@@ -23,7 +23,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $baseURL = 'http://20.188.124.87/';
+	public $baseURL = 'http://localhost:8080/';
 
 	/**
 	 * --------------------------------------------------------------------------
@@ -36,7 +36,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $indexPage = '';
+	public $indexPage = 'index.php';
 
 	/**
 	 * --------------------------------------------------------------------------
@@ -55,7 +55,7 @@ class App extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $uriProtocol = 'PATH_INFO';
+	public $uriProtocol = 'REQUEST_URI';
 
 	/**
 	 * --------------------------------------------------------------------------
