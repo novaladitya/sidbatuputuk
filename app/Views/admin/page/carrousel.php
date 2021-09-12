@@ -97,7 +97,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
                     <h3 class="card-title"><?= isset($error) ? $error['header'] : 'Isi Data Carrousel di Bawah'; ?></h3>
                 </div>
 
-                <?= form_open_multipart(base_url('adminpage/insertcarrousel')); ?>
+                <?= form_open_multipart(base_url('AdminPage/insertCarrousel')); ?>
                 <div class="card-body">
                     <div class="form-group">
                         <label for="input-gambar">Gambar Carrousel</label>
@@ -138,7 +138,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
                     <h3 class="card-title"><?= isset($error) ? $error['header'] : 'Ubah Data Carrousel di Bawah'; ?></h3>
                 </div>
 
-                <?= form_open_multipart(base_url('adminpage/updatecarrousel')); ?>
+                <?= form_open_multipart(base_url('AdminPage/updateCarrousel')); ?>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
@@ -189,7 +189,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
         var a = event.relatedTarget;
         var id = a.getAttribute('data-bs-id');
 
-        var link = '<?= base_url() ?>/adminpage/deletecarrousel/' + id;
+        var link = '<?= base_url() ?>/AdminPage/deleteCarrousel/' + id;
         buttonDelete.setAttribute('href', link);
     })
 </script>

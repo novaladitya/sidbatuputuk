@@ -99,7 +99,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
                     <h3 class="card-title"><?= isset($error) ? $error['header'] : 'Isi Data Produk Desa di Bawah'; ?></h3>
                 </div>
 
-                <?= form_open_multipart(base_url('adminpage/insertproduk')); ?>
+                <?= form_open_multipart(base_url('AdminPage/insertProduk')); ?>
                 <div class="card-body">
                     <div class="form-group">
                         <label for="input-gambar">Gambar Produk</label>
@@ -179,7 +179,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
                     <h3 class="card-title"><?= isset($error) ? $error['header'] : 'Isi Data Produk Desa di Bawah'; ?></h3>
                 </div>
 
-                <?= form_open_multipart(base_url('adminpage/updateproduk')); ?>
+                <?= form_open_multipart(base_url('AdminPage/updateProduk')); ?>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
@@ -268,7 +268,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
         var a = event.relatedTarget;
         var id = a.getAttribute('data-bs-id');
 
-        var link = '<?= base_url() ?>/adminpage/deleteproduk/' + id;
+        var link = '<?= base_url() ?>/AdminPage/deleteProduk/' + id;
         buttonDelete.setAttribute('href', link);
     })
 </script>

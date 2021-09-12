@@ -14,9 +14,6 @@
     <link href="<?= base_url(); ?>/assets/img/logo.png" rel="icon">
     <link href="<?= base_url(); ?>/assets/img/logo.png" rel="apple-touch-icon">
 
-    <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/admin/plugins/summernote/summernote-lite.min.css">
-
     <!-- Template Main CSS File -->
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/admin/dist/css/adminlte.min.css">
 </head>
@@ -43,7 +40,7 @@
                     </div>
                 <?php endif; ?>
 
-                <form action="adminpage/auth" method="post">
+                <form action="AdminPage/auth" method="post">
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Username" name="username">
                         <div class="input-group-append">

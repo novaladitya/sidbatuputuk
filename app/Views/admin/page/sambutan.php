@@ -107,7 +107,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
                     <h3 class="card-title"><?= isset($error) ? $error['header'] : 'Isi Data Sambutan di Bawah'; ?></h3>
                 </div>
 
-                <?= form_open_multipart(base_url('adminpage/insertsambutan')); ?>
+                <?= form_open_multipart(base_url('AdminPage/insertSambutan')); ?>
                 <div class="card-body">
                     <div class="form-group">
                         <label for="input-gambar">Foto</label>
@@ -170,7 +170,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
                     <h3 class="card-title"><?= isset($error) ? $error['header'] : 'Ubah Data Sambutan di Bawah'; ?></h3>
                 </div>
 
-                <?= form_open_multipart(base_url('adminpage/updatesambutan')); ?>
+                <?= form_open_multipart(base_url('AdminPage/updateSambutan')); ?>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-2">
@@ -239,7 +239,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
         var a = event.relatedTarget;
         var id = a.getAttribute('data-bs-id');
 
-        var link = '<?= base_url() ?>/adminpage/deletesambutan/' + id;
+        var link = '<?= base_url() ?>/AdminPage/deleteSambutan/' + id;
         buttonDelete.setAttribute('href', link);
     })
 </script>

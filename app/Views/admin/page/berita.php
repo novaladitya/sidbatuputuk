@@ -109,7 +109,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
                     <h3 class="card-title"><?= isset($error) ? $error['header'] : 'Isi Post Berita Desa di Bawah'; ?></h3>
                 </div>
 
-                <?= form_open_multipart(base_url('adminpage/insertberita')); ?>
+                <?= form_open_multipart(base_url('AdminPage/insertBerita')); ?>
                 <div class="card-body">
                     <div class="form-group">
                         <label for="input-simpul">Gambar Sampul Post</label>
@@ -158,7 +158,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
                     <h3 class="card-title"><?= isset($error) ? $error['header'] : 'Isi Post Berita Desa di Bawah'; ?></h3>
                 </div>
 
-                <?= form_open_multipart(base_url('adminpage/updateberita')); ?>
+                <?= form_open_multipart(base_url('AdminPage/updateBerita')); ?>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
@@ -217,7 +217,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
         var a = event.relatedTarget;
         var id = a.getAttribute('data-bs-id');
 
-        var link = '<?= base_url() ?>/adminpage/deleteberita/' + id;
+        var link = '<?= base_url() ?>/AdminPage/deleteBerita/' + id;
         buttonDelete.setAttribute('href', link);
     })
 </script>

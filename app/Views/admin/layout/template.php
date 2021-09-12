@@ -41,7 +41,7 @@
 
       <!-- Right Side -->
       <ul class="navbar-nav ml-auto">
-        <a type="button" class="btn btn-danger" href="/adminpage/logout">Logout</a>
+        <a type="button" class="btn btn-danger" href="/AdminPage/logout">Logout</a>
       </ul>
     </nav>
     <!-- ======= /Header ======= -->
@@ -106,7 +106,7 @@
         var data = new FormData();
         data.append("image", image);
         $.ajax({
-          url: "<?= site_url('adminpage/upload_image') ?>",
+          url: "<?= site_url('AdminPage/upload_image') ?>",
           cache: false,
           contentType: false,
           processData: false,
@@ -127,7 +127,7 @@
             src: src
           },
           type: "POST",
-          url: "<?= site_url('adminpage/delete_image') ?>",
+          url: "<?= site_url('AdminPage/delete_image') ?>",
           cache: false,
           success: function(response) {
             console.log(response);

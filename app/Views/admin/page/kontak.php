@@ -26,7 +26,7 @@
                         <h3 class="card-title"><?= isset($error) ? $error['header'] : (session()->getFlashdata('success') ? session()->getFlashdata('success') : 'Isi Data Kontak di Bawah'); ?></h3>
                     </div>
 
-                    <form action="/adminpage/updatekontak">
+                    <form action="/AdminPage/updateKontak">
                         <div class="card-body">
                             <?php foreach ($kontak as $k) : ?>
                                 <div class="row">

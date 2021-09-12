@@ -36,7 +36,7 @@
                             </div>
                         </div>
 
-                        <form action="/adminpage/updatepersentasepekerjaan">
+                        <form action="/AdminPage/updatePersentasePekerjaan">
                             <?php $i = 1; ?>
                             <?php foreach ($pekerjaan as $p) : ?>
                                 <div class="row">

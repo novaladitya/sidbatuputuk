@@ -109,7 +109,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
                     <h3 class="card-title"><?= isset($error) ? $error['header'] : 'Isi Post Lembaga Masyarakat di Bawah'; ?></h3>
                 </div>
 
-                <?= form_open_multipart(base_url('adminpage/insertlembagamasyarakat')); ?>
+                <?= form_open_multipart(base_url('AdminPage/insertLembagaMasyarakat')); ?>
                 <div class="card-body">
                     <div class="form-group">
                         <label for="input-simpul">Gambar Sampul Post</label>
@@ -158,7 +158,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
                     <h3 class="card-title"><?= isset($error) ? $error['header'] : 'Isi Post Lembaga Masyarakat di Bawah'; ?></h3>
                 </div>
 
-                <?= form_open_multipart(base_url('adminpage/updatelembagamasyarakat')); ?>
+                <?= form_open_multipart(base_url('AdminPage/updateLembagaMasyarakat')); ?>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
@@ -217,7 +217,7 @@ session()->getFlashdata('error') ? $error = session()->getFlashdata('error') : n
         var a = event.relatedTarget;
         var id = a.getAttribute('data-bs-id');
 
-        var link = '<?= base_url() ?>/adminpage/deletelembagamasyarakat/' + id;
+        var link = '<?= base_url() ?>/AdminPage/deleteLembagaMasyarakat/' + id;
         buttonDelete.setAttribute('href', link);
     })
 </script>
