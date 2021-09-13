@@ -10,22 +10,12 @@
 
       <div class="carousel-inner" role="listbox">
 
-        <div class="carousel-item active" style="background-image: url(assets/img/beranda/carrousel/gambar1.svg)">
+        <div class="carousel-item active" style="background-image: url(assets/img/beranda/carrousel/coba1.svg)">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Desaku Desamu</h2>
-              <p class="animate__animated animate__fadeInUp">Ayo Cari Tahu Tentang Desa Ini!</p>
-              <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Selengkapnya</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item" style="background-image: url(assets/img/beranda/carrousel/gambar2.svg)">
-          <div class="carousel-container">
-            <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Desaku Desamu</h2>
-              <p class="animate__animated animate__fadeInUp">Ayo pilih pelayanan yang kamu butuhkan sekarang!</p>
-              <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Pelayanan</a>
+              <h2 class="animate__animated animate__fadeInDown">Selamat Datang !<br>Sistem Informasi Desa Batu Putuk</h2>
+              <p class="animate__animated animate__fadeInUp">Lihat Galeri dan Produk Desa !</p>
+              <a href="/belanja" class="btn-get-started scrollto animate__animated animate__fadeInUp">Lihat</a>
             </div>
           </div>
         </div>
@@ -34,7 +24,7 @@
           <div class="carousel-item" style="background-image: url(assets/img/beranda/carrousel/<?= $c['gambar']; ?>)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Desaku Desamu</h2>
+                <h2 class="animate__animated animate__fadeInDown">Sistem Informasi Desa</h2>
                 <p class="animate__animated animate__fadeInUp"><?= $c['judul']; ?></p>
               </div>
             </div>

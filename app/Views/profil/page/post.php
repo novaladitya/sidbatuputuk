@@ -3,14 +3,14 @@
 <?= $this->section('content'); ?>
 <main id="main">
   <!-- ======= Blog Header ======= -->
-  <div class="header-bg page-area">
+  <div class="header-bg page-area" style="background-image: url(/assets/img/beranda/belanja/profil.png)">
     <div class="container position-relative">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="slider-content text-center">
             <div class="header-bottom">
               <div class="layer2">
-                <h1 class="title2">Desaku Desamu</h1>
+                <h1 class="title2">Desa Batu Putuk</h1>
               </div>
               <div class="layer3">
                 <h2 class="title3"><?= $post->kategori; ?></h2>
@@ -112,7 +112,7 @@
                     <a href="/profil-desa">Profil Desa</a>
                   </li>
                   <li>
-                    <a href="/lembaga-masyarakat">Lembaga Masyarakat</a>
+                    <a href="/lembaga-masyarakat">Lembaga Masyarakat dan Tempat Wisata</a>
                   </li>
                   <li>
                     <a href="/berita">Berita Desa</a>

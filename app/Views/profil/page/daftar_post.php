@@ -19,7 +19,7 @@
       $title = "Blog Desa";
   }
   ?>
-  <div class="header-bg page-area">
+  <div class="header-bg page-area" style="background-image: url(assets/img/beranda/belanja/berita.svg)">
     <div class="container position-relative">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -29,7 +29,7 @@
                 <h1 class="title2"><?= $title; ?></h1>
               </div>
               <div class="layer3">
-                <h2 class="title3">Desaku Desamu</h2>
+                <h2 class="title3">Desa Batu Putuk</h2>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
                     <a class="<?= $halaman == 'profil_desa' ? 'active' : '' ?>" href="/profil-desa">Profil Desa</a>
                   </li>
                   <li>
-                    <a class="<?= $halaman == 'lembaga_masyarakat' ? 'active' : '' ?>" href="/lembaga-masyarakat">Lembaga Masyarakat</a>
+                    <a class="<?= $halaman == 'lembaga_masyarakat' ? 'active' : '' ?>" href="/lembaga-masyarakat">Lembaga Masyarakat dan Tempat Wisata</a>
                   </li>
                   <li>
                     <a class="<?= $halaman == 'berita' ? 'active' : '' ?>" href="/berita">Berita Desa</a>

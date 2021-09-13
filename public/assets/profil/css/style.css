@@ -295,7 +295,7 @@ div#preloader {
 }
 
 .header-bg {
-  background: url(../../img/background/page-header.jpg);
+  /* background: url(../../img/background/page-header.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -691,7 +691,7 @@ div#preloader {
 }
 
 #hero .btn-get-started:hover {
-  background: #07b5d0;
+  background: #073E56;
   color: #fff;
 }
 
@@ -1115,8 +1115,8 @@ a.btn-selengkap {
 }
 
 #portfolio-flters li:hover {
-  border-color: #07b5d0;
-  background: #07b5d0;
+  border-color: #073E56;
+  background: #073E56;
   color: #fff;
 }
 
@@ -1806,8 +1806,8 @@ a.btn-selengkap {
 }
 
 .single-blog .ready-btn:hover {
-  border: 1px solid #07b5d0;
-  background: #07b5d0;
+  border: 1px solid #073E56;
+  background: #073E56;
   color: #fff;
 }
 

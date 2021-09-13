@@ -69,10 +69,10 @@
                         <div class="footer-content">
                             <div class="footer-head">
                                 <div class="footer-logo">
-                                    <h2><span>Desaku</span> Desamu</h2>
+                                    <h2>Desa <span>Batu Putuk</span></h2>
                                 </div>
 
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                                <p>Selengkapnya tentang wisata dan kontak kelurahan Batu Putuk dapat di lihat pada menu Kontak dan Blog. Ingat jangan lupa selalu menerapkan protokol kesehatan!</p>
                                 <!-- <div class="footer-icons">
                                     <ul>
                                         <li>
@@ -112,7 +112,7 @@
                     <div class="col-md-4">
                         <div class="footer-content">
                             <div class="footer-head">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                <iframe src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.3802493557132!2d105.2227560258653!3d-5.436477278062212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40da08fa6c72ed%3A0x2f6f543e49748291!2sBumi%20Kedaton%20Zoo!5e0!3m2!1sid!2sid!4v1631545451275!5m2!1sid!2sid" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="copyright text-center">
                             <p>
-                                Copyright &copy; 2021 <strong>Desaku Desamu</strong>.
+                                Copyright &copy; 2021 <strong>Desa Batu Putuk</strong>.
                             </p>
                         </div>
                         <div class="credits">

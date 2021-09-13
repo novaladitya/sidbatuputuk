@@ -4,7 +4,7 @@
 <main id="main">
 
     <!-- ======= Blog Header ======= -->
-    <div class="header-bg page-area">
+    <div class="header-bg page-area" style="background-image: url(assets/img/beranda/belanja/galeri.svg)">
         <div class="container position-relative">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -70,7 +70,8 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="suscribe-text text-center">
                         <h3>Ingin Berjualan di sini juga?</h3>
-                        <a class="sus-btn" href="">Daftar Dagangan</a>
+
+                        <a class="sus-btn" href="https://wa.me/6281274125205?text=Saya%20tertarik%20berjualan%20di%20website.">Daftar Dagangan</a>
                     </div>
                 </div>
             </div>
